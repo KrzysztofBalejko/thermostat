@@ -24,3 +24,8 @@ Thermo.prototype.powersaving_on = function (){
   this.max_temp = 25;
   return this.max_temp;
 };
+
+Thermo.prototype.powersaving_off = function(){
+  this.max_temp = 32;
+  return this.max_temp;
+};
