@@ -9,3 +9,7 @@ Thermo.prototype.temperature = function(){
 Thermo.prototype.up = function(){
   this.def_temp++
 };
+
+Thermo.prototype.down = function(){
+  this.def_temp -= 1;
+};
