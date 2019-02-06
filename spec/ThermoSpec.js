@@ -46,6 +46,15 @@ describe('Thermo', function(){
     expect(thermostat.def_temp).toEqual(20);
   });
 
+  it("thermostat's current energy usage", function(){
+    thermostat.def_temp = 17;
+    expect(thermostat.usage()).toEqual('green');
+    thermostat.def_temp = 24;
+    expect(thermostat.usage()).toEqual('black');
+    thermostat.def_temp = 26;
+    expect(thermostat.usage()).toEqual('red');
+  });
+
 
 
 });
