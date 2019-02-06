@@ -5,3 +5,7 @@ function Thermo(){
 Thermo.prototype.temperature = function(){
   return this.def_temp;
 };
+
+Thermo.prototype.up = function(){
+  this.def_temp++
+};
