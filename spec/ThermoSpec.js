@@ -41,6 +41,11 @@ describe('Thermo', function(){
     expect(thermostat.max_temp).toEqual(25);
   });
 
+  it('resets the temperature to 20 with a reset function',function(){
+    thermostat.reset();
+    expect(thermostat.def_temp).toEqual(20);
+  });
+
 
 
 });
