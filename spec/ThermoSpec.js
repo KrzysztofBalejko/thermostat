@@ -37,6 +37,9 @@ describe('Thermo', function(){
     expect(thermostat.max_temp).toEqual(32);
   });
 
+  it('Power saving mode is on by default',function(){
+    expect(thermostat.max_temp).toEqual(25);
+  });
 
 
 
