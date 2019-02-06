@@ -1,7 +1,8 @@
 function Thermo(){
   this.def_temp = 20;
   this.min_temp = 10;
-  this.max_temp = 25;
+  this.max_temp = 32;
+  this.powersaving_on();
 };
 
 Thermo.prototype.temperature = function(){
