@@ -6,8 +6,13 @@ describe('Thermo', function(){
     thermostat = new Thermo
   });
 
-  it('Thermostat starts at 20 degrees', function(){
+  it('starts at 20 degrees', function(){
     expect(thermostat.temperature()).toEqual(20);
+  });
+
+  it('can increase the temperature with an up function', function(){
+    thermostat.up();
+    expect(thermostat.def_temp).toBeGreaterThan(20);
   });
 
 
