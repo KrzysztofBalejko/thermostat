@@ -15,6 +15,11 @@ describe('Thermo', function(){
     expect(thermostat.def_temp).toBeGreaterThan(20);
   });
 
+  it('decrease the temperature with a down function', function(){
+    thermostat.down();
+    expect(thermostat.def_temp).toBeLessThan(20);
+  });
+
 
 
 });
