@@ -35,3 +35,13 @@ Thermo.prototype.reset = function(){
    this.def_temp = 20;
    return this.def_temp;
 };
+
+Thermo.prototype.usage = function(){
+  if (this.def_temp < 18) {
+    return 'green';
+  } else if (this.def_temp > 18 && this.def_temp < 25 ) {
+    return 'black';
+  } else if (this.def_temp > 25) {
+    return 'red';
+  };
+};
