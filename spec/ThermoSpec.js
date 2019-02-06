@@ -20,6 +20,12 @@ describe('Thermo', function(){
     expect(thermostat.def_temp).toBeLessThan(20);
   });
 
+  it('minimum temperature is 10 degrees', function(){
+    expect(thermostat.min_temp).toEqual(10);
+  });
+
+
+
 
 
 });
