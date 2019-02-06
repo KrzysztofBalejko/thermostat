@@ -23,17 +23,15 @@ Thermo.prototype.down = function(){
 
 Thermo.prototype.powersaving_on = function (){
   this.max_temp = 25;
-  return this.max_temp;
+  // return this.max_temp;
 };
 
 Thermo.prototype.powersaving_off = function(){
   this.max_temp = 32;
-  return this.max_temp;
 };
 
 Thermo.prototype.reset = function(){
    this.def_temp = 20;
-   return this.def_temp;
 };
 
 Thermo.prototype.usage = function(){

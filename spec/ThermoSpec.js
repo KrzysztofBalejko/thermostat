@@ -28,7 +28,7 @@ describe('Thermo', function(){
     for (var i of Array(7).keys()){
       thermostat.up();
     };
-    expect(thermostat.powersaving_on()).toBeLessThan(26);
+    expect(thermostat.max_temp).toEqual(25);
   });
 
   it('power saving mode is off, the maximum temperature is 32 degrees', function(){
@@ -54,7 +54,5 @@ describe('Thermo', function(){
     thermostat.def_temp = 26;
     expect(thermostat.usage()).toEqual('red');
   });
-
-
 
 });
