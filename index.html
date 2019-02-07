@@ -11,6 +11,17 @@
   $(document).ready(function() {
 
     var thermostat = new Thermo();
+
+    $('#usage').click(function(){
+      if (thermostat.usage() == 'black' ) {
+        $('#color').attr('class', 'card text-white bg-secondary mb-3');
+      } else if (thermostat.usage() == 'green' ) {
+        $('#color').attr('class', 'card text-white bg-success mb-3');
+      } else if (thermostat.usage() == 'red' ) {
+        $('#color').attr('class', 'card text-white bg-danger mb-3');
+      };
+    });
+
     $('#temperature').text(thermostat.temperature());
 
     $('#plus').click(function(){
@@ -26,7 +37,10 @@
     $('#clear').click(function(){
       thermostat.reset();
       $('#temperature').text(thermostat.temperature());
+      $('#color').attr('class', 'card text-white bg-info mb-3');
     });
+
+
 
     var clicks = 0;
 
@@ -48,6 +62,8 @@
 
 
 
+
+
   });
   </script>
 </head>
@@ -57,10 +73,10 @@
         <h2 style="color: black; padding: 1px;"><b>THERMOSTAT</b></h2>
         <button id="plus" type="button" class="btn btn-primary">+</button>
         <button id="clear" type="button" class="btn btn-outline-danger" style="margin: 3px;">Reset</button>
-        <button type="button" class="btn btn-primary">Usage</button>
+        <button id="usage" type="button" class="btn btn-primary">Usage</button>
         <button id="minus" type="button" class="btn btn-primary">-</button>
         <div class="card" style="max-width: 14rem; height: 10rem;">
-        <div style="margin: 1px; padding: 10px" class="card text-white bg-success mb-3" style="max-width: 20rem;">
+        <div id="color" style="margin: 1px; padding: 10px" class="card text-white bg-info mb-3" style="max-width: 20rem;">
           <div class="card-body">
             <h4 id="temperature" style="font-size: 45px;" class="card-title"></h4>
           </div>
