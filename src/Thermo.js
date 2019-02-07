@@ -43,7 +43,7 @@ Thermo.prototype.usage = function(){
     return 'green';
   } else if (this.def_temp > 18 && this.def_temp < 25 ) {
     return 'black';
-  } else if (this.def_temp > 25) {
+  } else if (this.def_temp >= 25) {
     return 'red';
   };
 };
