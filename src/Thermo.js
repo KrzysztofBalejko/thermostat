@@ -18,7 +18,11 @@ Thermo.prototype.up = function(){
 };
 
 Thermo.prototype.down = function(){
-  this.def_temp -= 1;
+  if (this.def_temp > this.min_temp) {
+    this.def_temp -= 1;
+  } else {
+    return this.def_temp;
+  };
 };
 
 Thermo.prototype.powersaving_on = function (){
