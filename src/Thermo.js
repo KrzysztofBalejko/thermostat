@@ -4,7 +4,11 @@ function Thermo(){
   this.max_temp = 32;
   this.powersaving_on();
 };
-
+// Thermo.prototype = {
+//   temperature: function() {
+//     //dashfdkhskf
+//   },
+// }
 Thermo.prototype.temperature = function(){
   return this.def_temp;
 };
